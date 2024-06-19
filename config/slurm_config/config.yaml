@@ -1,0 +1,13 @@
+default-resources:
+  mem_mb: 1000
+  time: 60
+ 
+set-resources:
+  mark_duplicates:
+    mem_mb: 2000
+  generate_features:
+    mem_mb: 2000
+  bwa_index:
+    mem_mb: 2000
+  bwa_strandseq_to_reference_alignment:
+    mem_mb: 2000
