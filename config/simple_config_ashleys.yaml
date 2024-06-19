@@ -1,0 +1,100 @@
+# --------------------------------------------------------
+# Ashleys-QC pipeline Configuration
+# --------------------------------------------------------
+version: 2.3.0
+
+# Email for notifications about the pipeline's status
+email: ""
+
+# List of samples to process if multiple are specified
+samples_to_process: []
+
+# --------------------------------------------------------
+# Data location & I/O
+# --------------------------------------------------------
+
+# Absolute path to the data location (modify as needed)
+data_location: ".tests/data_CHR17"
+
+# Directory to publish important data (e.g., stats, plots, counts). Leave empty if not required.
+publishdir: ""
+
+# --------------------------------------------------------
+# Reference Data Configuration
+# --------------------------------------------------------
+
+# Reference genome used by BWA to map FASTQ files
+reference: "hg38"
+
+# Reference genome files' location
+references_data:
+  "hg38": { reference_fasta: "workflow/data/ref_genomes/hg38.fa" }
+  "T2T": { reference_fasta: "workflow/data/ref_genomes/T2T.fa" }
+  "hg19": { reference_fasta: "workflow/data/ref_genomes/hg19.fa" }
+  "mm10": { reference_fasta: "workflow/data/ref_genomes/mm10.fa" }
+
+# List of chromosomes to process
+chromosomes:
+  - chr17
+
+# Specify any chromosomes to exclude from processing
+chromosomes_to_exclude: []
+
+# --------------------------------------------------------
+# Quality Control Configuration
+# --------------------------------------------------------
+
+# Threshold for Ashleys-qc binary classification
+ashleys_threshold: 0.5
+
+# Enable or disable FastQC analysis
+MultiQC: False
+
+# Enable or disable ashleys-qc automatic classification
+bypass_ashleys: False
+
+# --------------------------------------------------------
+# Counts Configuration
+# --------------------------------------------------------
+
+# Enable or disable multistep normalization analysis
+multistep_normalisation: False
+
+# Advanced parameters for multi-step normalisation
+multistep_normalisation_options:
+  min_reads_bin: 5
+  n_subsample: 1000
+  min_reads_cell: 100000
+
+# Window size used by the mosaic binning algorithm
+window: 200000
+
+# --------------------------------------------------------
+# GENECORE Configuration
+# --------------------------------------------------------
+
+genecore: False
+genecore_date_folder: ""
+genecore_prefix: "/g/korbel/STOCKS/Data/Assay/sequencing/2023"
+genecore_regex_element: "PE20"
+
+# --------------------------------------------------------
+# Internal Parameters
+# --------------------------------------------------------
+
+# Is the pipeline used as a submodule in mosaicatcher-pipeline?
+mosaicatcher_pipeline: False
+
+# Overwrite ASHLEYS PREDICTIONS for GitHub & smoke dataset purpose
+use_light_data: true
+
+# For snakemake linting
+abs_path: "/"
+
+# Type of plots for counts
+plottype_counts:
+  - "raw"
+  - "normalised"
+
+# Option to display all potential commands (as listed in config_metadata.yaml)
+list_commands: False
