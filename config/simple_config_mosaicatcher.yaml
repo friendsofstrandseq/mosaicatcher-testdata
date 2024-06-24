@@ -50,6 +50,14 @@ MultiQC: False
 bypass_ashleys: False
 
 # --------------------------------------------------------
+# Other modules
+# --------------------------------------------------------
+
+breakpointR: False
+breakpointR_only: False
+whatshap_only: False
+
+# --------------------------------------------------------
 # GENECORE Configuration
 # --------------------------------------------------------
 
