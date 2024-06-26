@@ -28,7 +28,7 @@ reference: "hg38"
 
 # Reference genome files' location
 references_data:
-  "hg38": { reference_fasta: ".tests/external_data/chr17.fa.gz" }
+  "hg38": { reference_fasta: ".tests/external_data/chr17.fa" }
   # "T2T": { reference_fasta: "workflow/data/ref_genomes/T2T.fa" }
   # "hg19": { reference_fasta: "workflow/data/ref_genomes/hg19.fa" }
   # "mm10": { reference_fasta: "workflow/data/ref_genomes/mm10.fa" }
