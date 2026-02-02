@@ -60,6 +60,8 @@ whatshap_only: False
 # Enable MultiQC reports
 MultiQC: True
 
+ploidy: False
+
 # --------------------------------------------------------
 # Output Configuration
 # --------------------------------------------------------

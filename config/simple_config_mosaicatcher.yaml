@@ -56,6 +56,7 @@ bypass_ashleys: False
 breakpointR: False
 breakpointR_only: False
 whatshap_only: False
+ploidy: True
 
 # --------------------------------------------------------
 # GENECORE Configuration
