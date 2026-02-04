@@ -160,3 +160,19 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+# Exclude config and log folders everywhere except top-level config
+config/
+log/
+!/config/
+
+# For data_CHR17/RPE-BM510, ignore everything except fastq, bam, and scNOVA_input_user
+/data_CHR17/RPE-BM510/*
+!/data_CHR17/RPE-BM510/fastq/
+!/data_CHR17/RPE-BM510/bam/
+!/data_CHR17/RPE-BM510/scNOVA_input_user/
+
+# For data_chr19_mm/LanexLorenzoNPCDMSO18holdSortUVLED, ignore everything except fastq and bam
+/data_chr19_mm/LanexLorenzoNPCDMSO18holdSortUVLED/*
+!/data_chr19_mm/LanexLorenzoNPCDMSO18holdSortUVLED/fastq/
+!/data_chr19_mm/LanexLorenzoNPCDMSO18holdSortUVLED/bam/
